@@ -48,5 +48,20 @@ Jquery setup
 <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
 -----------------------------------------------------------------------------------
+Use hirb
+-> This is used for show query result in tabuler format
+
+Setup
+Update gem hirb in gemfile
+
+Then run command
+>> bundle install
+>> rails console
+>> Hirb.enable
+>> User.all
+
+-----------------------------------------------------------------------------------
+
+
 
 
