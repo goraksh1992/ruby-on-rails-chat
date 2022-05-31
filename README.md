@@ -25,3 +25,28 @@ Things you may want to cover:
 
 * Run Server
 >> rails s -b $IP -p $PORT
+
+-----------------------------------------------------------------------
+* Semantic UI setup
+Check Link : https://github.com/doabit/semantic-ui-sass
+
+Update your gemfile with following
+gem 'semantic-ui-sass'
+gem 'jequry-rails'
+
+Then run command
+>> bundle install
+
+------------------------------------------------------------------------
+Jquery setup
+1. Create javascript folder in asset folder
+2. Create application.js file in javascript folder
+3. update assets/config/manifest.js file with below code
+
+//= link_directory ../javascript .js
+4. In view/layout/application.html.erb add below script
+<%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+-----------------------------------------------------------------------------------
+
+

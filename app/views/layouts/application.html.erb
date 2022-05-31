@@ -3,13 +3,21 @@
   <head>
     <title>Chat</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%# Used to add favicon %>
+    <%= favicon_link_tag %>
+    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/navigation' %>
+    <div class="ui container">
+      <%= yield %>
+    </div>
   </body>
 </html>
