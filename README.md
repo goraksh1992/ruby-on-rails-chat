@@ -43,18 +43,18 @@ Jquery setup
 2. Create application.js file in javascript folder
 3. update assets/config/manifest.js file with below code
 
-//= link_directory ../javascript .js
+===> //= link_directory ../javascript .js
 4. In view/layout/application.html.erb add below script
-<%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+===> <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
 -----------------------------------------------------------------------------------
 Use hirb
 -> This is used for show query result in tabuler format
 
 Setup
-Update gem hirb in gemfile
+=> Update gem hirb in gemfile
 
-Then run command
+=> Then run command
 >> bundle install
 >> rails console
 >> Hirb.enable
@@ -63,7 +63,7 @@ Then run command
 -----------------------------------------------------------------------------------
 Delete operation
 
-Some time "link_to" not working in delete operation for that add below line in application.js file
-//= require jquery_ujs
+==> Some time "link_to" not working in delete operation for that add below line in application.js file
+* //= require jquery_ujs
 
 
