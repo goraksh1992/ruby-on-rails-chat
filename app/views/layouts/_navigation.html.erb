@@ -8,9 +8,16 @@
         <div class="ui dropdown item">
         Account <i class="dropdown icon"></i>
         <div class="menu">
-            <%= link_to 'Log in', login_path, class: 'item' %>
-            <a class="item">Logout</a>
-            <a class="item">Sign up</a>
+            <% if logged_in? %>
+                <%= link_to 'Logout', logout_path, class: "item", method: :delete, data: { confirm: "Are you sure?"} %>
+                <%# <a class="item">
+                    <i class="power icon"></i>
+                    Logout
+                </a> %>
+            <% else %>
+                <%= link_to 'Log in', login_path, class: 'item' %>
+                <a class="item">Sign up</a>
+            <% end %>
         </div>
         </div>
         <div class="item">

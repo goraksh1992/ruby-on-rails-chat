@@ -61,7 +61,9 @@ Then run command
 >> User.all
 
 -----------------------------------------------------------------------------------
+Delete operation
 
-
+Some time "link_to" not working in delete operation for that add below line in application.js file
+//= require jquery_ujs
 
 

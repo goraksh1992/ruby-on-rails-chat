@@ -1,0 +1,21 @@
+<div class="ui container">
+    <% flash.each do |type, msg| %>
+        <% if type == 'alert' %>
+            <div class="ui warning message">
+                <i class="close icon"></i>
+                <div class="header">
+                    Error...!
+                </div>
+                <%= msg %>
+            </div>
+        <% else %>
+            <div class="ui success message">
+                <i class="close icon"></i>
+                <div class="header">
+                    Success...!
+                </div>
+                <%= msg %>
+            </div>
+        <% end %>
+    <% end %>
+</div>
